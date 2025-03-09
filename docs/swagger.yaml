@@ -1,6 +1,5 @@
-basePath: /
 definitions:
-  models.Task:
+  entities.Task:
     properties:
       completed:
         type: boolean
@@ -15,12 +14,8 @@ definitions:
       title:
         type: string
     type: object
-host: localhost:8080
 info:
   contact: {}
-  description: Esta é uma API de gerenciamento de tarefas.
-  title: Task API
-  version: "1.0"
 paths:
   /tasks:
     get:
@@ -32,7 +27,7 @@ paths:
           description: OK
           schema:
             items:
-              $ref: '#/definitions/models.Task'
+              $ref: '#/definitions/entities.Task'
             type: array
         "500":
           description: Internal Server Error
@@ -53,7 +48,7 @@ paths:
         name: task
         required: true
         schema:
-          $ref: '#/definitions/models.Task'
+          $ref: '#/definitions/entities.Task'
       produces:
       - application/json
       responses:
@@ -131,7 +126,7 @@ paths:
         name: task
         required: true
         schema:
-          $ref: '#/definitions/models.Task'
+          $ref: '#/definitions/entities.Task'
       produces:
       - application/json
       responses:

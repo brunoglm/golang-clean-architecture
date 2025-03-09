@@ -1,13 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Esta é uma API de gerenciamento de tarefas.",
-        "title": "Task API",
-        "contact": {},
-        "version": "1.0"
+        "contact": {}
     },
-    "host": "localhost:8080",
-    "basePath": "/",
     "paths": {
         "/tasks": {
             "get": {
@@ -25,7 +20,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/models.Task"
+                                "$ref": "#/definitions/entities.Task"
                             }
                         }
                     },
@@ -59,7 +54,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Task"
+                            "$ref": "#/definitions/entities.Task"
                         }
                     }
                 ],
@@ -119,7 +114,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Task"
+                            "$ref": "#/definitions/entities.Task"
                         }
                     }
                 ],
@@ -222,7 +217,7 @@
         }
     },
     "definitions": {
-        "models.Task": {
+        "entities.Task": {
             "type": "object",
             "properties": {
                 "completed": {
